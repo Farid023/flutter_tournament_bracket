@@ -21,7 +21,7 @@ dependencies:
 Import the package in your Dart code:
 
 ```dart
-import 'package:flutter_tournament_bracket/bracket.dart';
+import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 ```
 
 ## 🛠️ Usage
@@ -60,7 +60,7 @@ Here's a complete example:
 ```dart
 
 import 'package:flutter/material.dart';
-import 'package:flutter_tournament_bracket/bracket.dart';
+import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 
 // Define tournaments data
 final List<Tournament> _tournaments = [

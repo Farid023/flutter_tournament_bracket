@@ -1,29 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tournament_bracket/bracket.dart';
+import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 
 // Define tournaments data
 final List<Tournament> _tournaments = [
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
-    TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
-    TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
-    TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
+    TournamentMatch(
+        id: "1",
+        teamA: "Real Madrid",
+        teamB: "Barcelona",
+        scoreTeamA: "3",
+        scoreTeamB: "1"),
+    TournamentMatch(
+        id: "2",
+        teamA: "Chelsea",
+        teamB: "Liverpool",
+        scoreTeamA: "0",
+        scoreTeamB: "1"),
+    TournamentMatch(
+        id: "3",
+        teamA: "Juventus",
+        teamB: "Paris Saint-Germain",
+        scoreTeamA: "0",
+        scoreTeamB: "2"),
+    TournamentMatch(
+        id: "4",
+        teamA: "Manchester City",
+        teamB: "Inter Milan",
+        scoreTeamA: "4",
+        scoreTeamB: "2"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
-    TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
+    TournamentMatch(
+        id: "1",
+        teamA: "AC Milan",
+        teamB: "Atletico Madrid",
+        scoreTeamA: "4",
+        scoreTeamB: "0"),
+    TournamentMatch(
+        id: "2",
+        teamA: "Borussia Dortmund",
+        teamB: "Tottenham Hotspur",
+        scoreTeamA: "2",
+        scoreTeamB: "1"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
+    TournamentMatch(
+        id: "1",
+        teamA: "Ajax",
+        teamB: "Sevilla",
+        scoreTeamA: "4",
+        scoreTeamB: "3"),
   ])
 ];
-
-
 
 void main() {
   runApp(const MyApp());
 }
-
 
 /// The main application widget.
 class MyApp extends StatelessWidget {

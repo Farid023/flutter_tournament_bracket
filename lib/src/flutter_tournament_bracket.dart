@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tournament_bracket/src/model/tournament_match.dart';
 import 'package:flutter_tournament_bracket/src/model/tournament_model.dart';
-import 'package:flutter_tournament_bracket/src/utils/calculate_seporator_height.dart';
+import 'package:flutter_tournament_bracket/src/utils/calculate_separator_height.dart';
 
 import 'widgets/bracket_match_card.dart';
 
@@ -106,9 +106,9 @@ class TournamentBracket extends StatelessWidget {
                             ),
                             Expanded(
                                 child: Divider(
-                                  thickness: 5,
-                                  color: lineColor,
-                                ))
+                              thickness: 5,
+                              color: lineColor,
+                            ))
                           ],
                         );
                       },
@@ -129,15 +129,12 @@ class TournamentBracket extends StatelessWidget {
   }
 }
 
-
-
 /// A widget that displays a list of matches.
 ///
 /// The [_MatchesList] widget arranges match cards in a vertical list with separators between them.
 class _MatchesList extends StatelessWidget {
   /// Creates a [_MatchesList] widget.
   const _MatchesList({
-    super.key,
     required this.matchCount,
     required this.separatorHeight,
     this.cardHeight = 100.0,
@@ -183,8 +180,8 @@ class _MatchesList extends StatelessWidget {
                     child: card != null
                         ? card!(item)
                         : BracketMatchCard(
-                      item: item,
-                    ));
+                            item: item,
+                          ));
               },
               separatorBuilder: (_, int index) {
                 return Container(
