@@ -3,7 +3,7 @@
 Flutter Tournament Bracket is a Flutter widget for displaying tournament brackets in a visually appealing and
 interactive way. This package is designed to help you create and display tournament brackets with ease.
 
-## Features
+## 🌟 Features
 
 - Display tournament brackets with customizable match cards.
 - Support for zooming and panning for better visibility.
@@ -24,7 +24,7 @@ Import the package in your Dart code:
 import 'package:flutter_tournament_bracket/bracket.dart';
 ```
 
-## Usage
+## 🛠️ Usage
 
 Use the TournamentBracket widget to display your tournament:
 
@@ -53,7 +53,7 @@ Use the TournamentBracket widget to display your tournament:
 
 ```
 
-## Example
+## 💡 Example
 
 Here's a complete example:
 
@@ -190,4 +190,4 @@ If you encounter any problems or you feel the library is missing a feature, plea
 
 ## 📃 License
 
-<a href="">MIT License</a>
+<a href="https://github.com/Farid023/flutter_tournament_bracket/blob/main/LICENSE">MIT License</a>

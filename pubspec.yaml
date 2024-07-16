@@ -1,7 +1,8 @@
 name: flutter_tournament_bracket
 description: "Flutter Tournament Bracket is a Flutter widget for displaying tournament brackets in a visually appealing and interactive way. This package is designed to help you create and display tournament brackets with ease."
-version: 1.0.0
-homepage:
+version: 0.1.0
+repository: https://github.com/Farid023/flutter_tournament_bracket
+issue_tracker: https://github.com/Farid023/flutter_tournament_bracket/issues
 
 
 environment:
