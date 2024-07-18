@@ -5,6 +5,12 @@ interactive way. This package is designed to help you create and display tournam
 
 ![Cover](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/cover.png?raw=true)
 
+
+## 🎬 Demo
+![Demo Desktop](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_desktop.gif?raw=true)
+![Demo Phone](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_phone.gif?raw=true)
+
+
 ## 🌟 Features
 
 - Display tournament brackets with customizable match cards.
