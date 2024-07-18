@@ -3,6 +3,8 @@
 Flutter Tournament Bracket is a Flutter widget for displaying tournament brackets in a visually appealing and
 interactive way. This package is designed to help you create and display tournament brackets with ease.
 
+![Cover](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/cover.png?raw=true)
+
 ## 🌟 Features
 
 - Display tournament brackets with customizable match cards.
