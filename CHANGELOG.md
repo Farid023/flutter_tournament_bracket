@@ -2,6 +2,7 @@
 
 * Added
 - 🎥 Added a demonstration video to showcase the package's functionality and features.
+
 * Updated
 - 📚 Expanded documentation to include detailed usage examples and explanations.
 
