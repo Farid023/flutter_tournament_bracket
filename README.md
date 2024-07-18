@@ -8,7 +8,6 @@ interactive way. This package is designed to help you create and display tournam
 
 ## 🎬 Demo
 ![Demo Desktop](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_desktop.gif?raw=true)
-![Demo Phone](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_phone.gif?raw=true)
 
 
 ## 🌟 Features
