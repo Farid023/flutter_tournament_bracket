@@ -33,9 +33,9 @@ Use the TournamentBracket widget to display your tournament:
     itemsMarginVertical: 20,
     cardHeight: 100,
     lineWidth: 220,
-    card: CustomMatchCard(),
-      list: [
-        Tournament(matches: [
+    card: (match) => CustomMatchCard(match),
+    list: [
+      Tournament(matches: [
         TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
         TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
         TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
