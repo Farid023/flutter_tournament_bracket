@@ -23,6 +23,7 @@ class TournamentBracket extends StatelessWidget {
     this.card,
     required this.list,
     this.lineColor = Colors.green,
+    this.lineWidth = 5.0
   });
 
   /// The vertical margin between items in the bracket.
@@ -31,8 +32,11 @@ class TournamentBracket extends StatelessWidget {
   /// The height of each match card.
   final double cardHeight;
 
-  /// The width of the lines connecting the matches.
+  /// The width of each match card.
   final double cardWidth;
+
+  // The width of the lines connecting the matches.
+  final double lineWidth;
 
   /// A custom widget builder for the match card. If not provided, a default card will be used.
   ///
@@ -136,15 +140,15 @@ class TournamentBracket extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border: Border(
                                       top: BorderSide(
-                                          color: lineColor, width: 5),
+                                          color: lineColor, width: lineWidth),
                                       right: BorderSide(
-                                          color: lineColor, width: 5),
+                                          color: lineColor, width: lineWidth),
                                       bottom: BorderSide(
-                                          color: lineColor, width: 5))),
+                                          color: lineColor, width: lineWidth))),
                             ),
                             Expanded(
                                 child: Divider(
-                              thickness: 5,
+                              thickness: lineWidth,
                               color: lineColor,
                             ))
                           ],
