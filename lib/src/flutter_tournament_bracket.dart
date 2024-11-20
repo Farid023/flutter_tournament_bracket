@@ -23,7 +23,11 @@ class TournamentBracket extends StatelessWidget {
     this.card,
     required this.list,
     this.lineColor = Colors.green,
-  });
+    this.lineBorderRadius = 10.0,
+    this.lineWidth = 60.0,
+    this.lineThickness = 5.0,
+  }) : assert(lineThickness <= cardHeight / 2,
+            "The line thickness must not exceed half the card height. Ensure that 'lineThickness' ($lineThickness) is <= 'cardHeight / 2' (${cardHeight / 2}).");
 
   /// The vertical margin between items in the bracket.
   final double itemsMarginVertical;
@@ -53,8 +57,23 @@ class TournamentBracket extends StatelessWidget {
   /// by implementing this builder function.
   final Widget Function(TournamentMatch match)? card;
 
-  /// The color of the lines connecting the matches.
+  /// The color of the lines connecting the matches in the tournament bracket.
   final Color lineColor;
+
+  /// The border radius of the lines connecting the matches.
+  /// This determines how rounded the corners of the lines appear.
+  final double lineBorderRadius;
+
+  /// The width of the lines connecting the matches.
+  /// This defines the horizontal span of the connecting lines.
+  final double lineWidth;
+
+  /// The thickness of the lines connecting the matches.
+  ///
+  /// Controls the thickness of the connector lines, affecting
+  /// how bold the lines appear. The value must not exceed half of
+  /// the [cardHeight] to maintain proper alignment and visual balance.
+  final double lineThickness;
 
   /// A list representing the matches in the tournament.
   /// Each element in the list should have a `matches` property indicating the number of matches in that round.
@@ -121,7 +140,7 @@ class TournamentBracket extends StatelessWidget {
               children: [
                 Flexible(
                   child: SizedBox(
-                    width: 80.0,
+                    width: lineWidth,
                     child: ListView.separated(
                       itemCount: item.matches.length ~/ 2,
                       physics: const NeverScrollableScrollPhysics(),
@@ -130,23 +149,38 @@ class TournamentBracket extends StatelessWidget {
                         return Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              height: (separatorH + cardHeight),
-                              width: 40.0,
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      top: BorderSide(
-                                          color: lineColor, width: 5),
-                                      right: BorderSide(
-                                          color: lineColor, width: 5),
-                                      bottom: BorderSide(
-                                          color: lineColor, width: 5))),
+                            Expanded(
+                              child: Container(
+                                height: (separatorH + cardHeight),
+                                // width: 40.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.horizontal(
+                                        right:
+                                            Radius.circular(lineBorderRadius)),
+                                    border: Border(
+                                        top: BorderSide(
+                                            color: lineColor,
+                                            width: lineThickness,
+                                            strokeAlign:
+                                                BorderSide.strokeAlignCenter),
+                                        right: BorderSide(
+                                            color: lineColor,
+                                            width: lineThickness,
+                                            strokeAlign:
+                                                BorderSide.strokeAlignCenter),
+                                        bottom: BorderSide(
+                                            color: lineColor,
+                                            width: lineThickness,
+                                            strokeAlign:
+                                                BorderSide.strokeAlignCenter))),
+                              ),
                             ),
                             Expanded(
                                 child: Divider(
-                              thickness: 5,
+                              thickness: lineThickness,
+                              height: lineThickness,
                               color: lineColor,
-                            ))
+                            )),
                           ],
                         );
                       },

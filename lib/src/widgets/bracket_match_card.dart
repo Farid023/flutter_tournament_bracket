@@ -77,9 +77,9 @@ class BracketMatchCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
                 style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                    ),
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
               )
             ],
           ),
