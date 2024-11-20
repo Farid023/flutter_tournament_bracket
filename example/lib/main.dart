@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Tournament Bracket',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -73,9 +73,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: TournamentBracket(
             list: _tournaments,
-            card: (item) {
-              return customMatchCard(item);
-            },
+            card: (item) => customMatchCard(item),
             itemsMarginVertical: 20.0,
             cardWidth: 220.0,
             cardHeight: 100,
@@ -88,75 +86,75 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
 
-  /// Custom widget to display match details.
-  Container customMatchCard(TournamentMatch item) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-          color: Colors.blue, borderRadius: BorderRadius.circular(12)),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                  item.teamA ?? "No Info",
-                  style: const TextStyle(fontSize: 16, color: Colors.black),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  item.teamB ?? "No Info",
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                  style: const TextStyle(fontSize: 16, color: Colors.black),
-                )
-              ],
-            ),
-          ),
-          const VerticalDivider(
-            color: Colors.black,
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-          Column(
+/// Custom widget to display match details.
+Container customMatchCard(TournamentMatch item) {
+  return Container(
+    padding: const EdgeInsets.all(12),
+    decoration: BoxDecoration(
+        color: Colors.blue, borderRadius: BorderRadius.circular(12)),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
-                item.scoreTeamA ?? "",
+                item.teamA ?? "No Info",
                 style: const TextStyle(fontSize: 16, color: Colors.black),
               ),
               const SizedBox(
                 height: 8,
               ),
               Text(
+                item.teamB ?? "No Info",
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
-                item.scoreTeamB ?? "",
-                style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600),
+                style: const TextStyle(fontSize: 16, color: Colors.black),
               )
             ],
           ),
-          const SizedBox(
-            width: 5,
-          )
-        ],
-      ),
-    );
-  }
+        ),
+        const VerticalDivider(
+          color: Colors.black,
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              item.scoreTeamA ?? "",
+              style: const TextStyle(fontSize: 16, color: Colors.black),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              item.scoreTeamB ?? "",
+              style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600),
+            )
+          ],
+        ),
+        const SizedBox(
+          width: 5,
+        )
+      ],
+    ),
+  );
 }

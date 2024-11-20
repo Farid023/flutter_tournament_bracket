@@ -42,29 +42,43 @@ import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 Use the TournamentBracket widget to display your tournament:
 
 ```dart
-  TournamentBracket
-(
-itemsMarginVertical: 20,
-cardHeight: 100,
-lineWidth: 220,
-card: (match) => CustomMatchCard(match),
-list: [
-Tournament(matches: [
-TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
-TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
-TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
-TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
-]),
-Tournament(matches: [
-TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
-TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
-]),
-Tournament(matches: [
-TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
-]),
-]
-,
-);
+
+class TournamentWidget extends StatelessWidget {
+  const TournamentWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: TournamentBracket(
+          list: [Tournament(matches: [
+            TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
+            TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
+            TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
+            TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
+          ]),
+            Tournament(matches: [
+              TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
+              TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
+            ]),
+            Tournament(matches: [
+              TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
+            ]),
+          ],
+          card: (item) => customMatchCard(item),
+          itemsMarginVertical: 20.0,
+          cardWidth: 220.0,
+          cardHeight: 100,
+          lineWidth: 80,
+          lineThickness: 5,
+          lineBorderRadius: 12,
+          lineColor: Colors.green,
+        ),
+      ),
+
+    );
+  }
+}
 
 ```
 
@@ -80,45 +94,17 @@ import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 // Define tournaments data
 final List<Tournament> _tournaments = [
   Tournament(matches: [
-    TournamentMatch(id: "1",
-        teamA: "Real Madrid",
-        teamB: "Barcelona",
-        scoreTeamA: "3",
-        scoreTeamB: "1"),
-    TournamentMatch(id: "2",
-        teamA: "Chelsea",
-        teamB: "Liverpool",
-        scoreTeamA: "0",
-        scoreTeamB: "1"),
-    TournamentMatch(id: "3",
-        teamA: "Juventus",
-        teamB: "Paris Saint-Germain",
-        scoreTeamA: "0",
-        scoreTeamB: "2"),
-    TournamentMatch(id: "4",
-        teamA: "Manchester City",
-        teamB: "Inter Milan",
-        scoreTeamA: "4",
-        scoreTeamB: "2"),
+    TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
+    TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
+    TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
+    TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1",
-        teamA: "AC Milan",
-        teamB: "Atletico Madrid",
-        scoreTeamA: "4",
-        scoreTeamB: "0"),
-    TournamentMatch(id: "2",
-        teamA: "Borussia Dortmund",
-        teamB: "Tottenham Hotspur",
-        scoreTeamA: "2",
-        scoreTeamB: "1"),
+    TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
+    TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1",
-        teamA: "Ajax",
-        teamB: "Sevilla",
-        scoreTeamA: "4",
-        scoreTeamB: "3"),
+    TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
   ])
 ];
 
@@ -144,9 +130,14 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: TournamentBracket(
             list: _tournaments,
-            card: (item) {
-              return customMatchCard(item);
-            },
+            card: (item) => customMatchCard(item),
+            itemsMarginVertical: 20.0,
+            cardWidth: 220.0,
+            cardHeight: 100,
+            lineWidth: 80,
+            lineThickness: 5,
+            lineBorderRadius: 12,
+            lineColor: Colors.green,
           ),
         ),
       ),

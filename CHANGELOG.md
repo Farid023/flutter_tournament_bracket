@@ -1,4 +1,10 @@
+## 1.0.5 
+- Updated Documentation.
+
 ## 1.0.4
+- Fix Bugs.
+
+## 1.0.3
 
 ### Added
 
