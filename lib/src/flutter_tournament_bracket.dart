@@ -35,7 +35,7 @@ class TournamentBracket extends StatelessWidget {
   /// The height of each match card.
   final double cardHeight;
 
-  /// The width of the lines connecting the matches.
+  /// The width of each match card
   final double cardWidth;
 
   /// A custom widget builder for the match card. If not provided, a default card will be used.

@@ -1,14 +1,20 @@
-# Flutter Tournament Bracket
+<h1 align="center">Flutter Tournament Bracket</h1>
 
-Flutter Tournament Bracket is a Flutter widget for displaying tournament brackets in a visually appealing and
-interactive way. This package is designed to help you create and display tournament brackets with ease.
+<p align=center>
+    Flutter Tournament Bracket is a Flutter package for displaying tournament brackets in a visually appealing and
+interactive way.
+    <br>
+  This package is designed to help you create and display tournament brackets with ease.
+    <br>
+    <br>
+   <span style="font-size: 0.9em"> Show some 👍 and ⭐ <a href="https://github.com/Farid023/flutter_tournament_bracket">star the repo</a> to support the project! </span>
+</p>
 
 ![Cover](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/cover.png?raw=true)
 
-
 ## 🎬 Demo
-![Demo Desktop](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_desktop.gif?raw=true)
 
+![Demo Desktop](https://github.com/Farid023/flutter_tournament_bracket/blob/main/assets/demo_desktop.gif?raw=true)
 
 ## 🌟 Features
 
@@ -36,27 +42,29 @@ import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 Use the TournamentBracket widget to display your tournament:
 
 ```dart
-  TournamentBracket(
-    itemsMarginVertical: 20,
-    cardHeight: 100,
-    lineWidth: 220,
-    card: (match) => CustomMatchCard(match),
-    list: [
-      Tournament(matches: [
-        TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
-        TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
-        TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
-        TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
-      ]),
-      Tournament(matches: [
-        TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
-        TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
-      ]),
-      Tournament(matches: [
-        TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
-      ]),
-    ],
-  );
+  TournamentBracket
+(
+itemsMarginVertical: 20,
+cardHeight: 100,
+lineWidth: 220,
+card: (match) => CustomMatchCard(match),
+list: [
+Tournament(matches: [
+TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
+TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
+TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
+TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
+]),
+Tournament(matches: [
+TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
+TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
+]),
+Tournament(matches: [
+TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
+]),
+]
+,
+);
 
 ```
 
@@ -72,17 +80,45 @@ import 'package:flutter_tournament_bracket/flutter_tournament_bracket.dart';
 // Define tournaments data
 final List<Tournament> _tournaments = [
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "Real Madrid", teamB: "Barcelona", scoreTeamA: "3", scoreTeamB: "1"),
-    TournamentMatch(id: "2", teamA: "Chelsea", teamB: "Liverpool", scoreTeamA: "0", scoreTeamB: "1"),
-    TournamentMatch(id: "3", teamA: "Juventus", teamB: "Paris Saint-Germain", scoreTeamA: "0", scoreTeamB: "2"),
-    TournamentMatch(id: "4", teamA: "Manchester City", teamB: "Inter Milan", scoreTeamA: "4", scoreTeamB: "2"),
+    TournamentMatch(id: "1",
+        teamA: "Real Madrid",
+        teamB: "Barcelona",
+        scoreTeamA: "3",
+        scoreTeamB: "1"),
+    TournamentMatch(id: "2",
+        teamA: "Chelsea",
+        teamB: "Liverpool",
+        scoreTeamA: "0",
+        scoreTeamB: "1"),
+    TournamentMatch(id: "3",
+        teamA: "Juventus",
+        teamB: "Paris Saint-Germain",
+        scoreTeamA: "0",
+        scoreTeamB: "2"),
+    TournamentMatch(id: "4",
+        teamA: "Manchester City",
+        teamB: "Inter Milan",
+        scoreTeamA: "4",
+        scoreTeamB: "2"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "AC Milan", teamB: "Atletico Madrid", scoreTeamA: "4", scoreTeamB: "0"),
-    TournamentMatch(id: "2", teamA: "Borussia Dortmund", teamB: "Tottenham Hotspur", scoreTeamA: "2", scoreTeamB: "1"),
+    TournamentMatch(id: "1",
+        teamA: "AC Milan",
+        teamB: "Atletico Madrid",
+        scoreTeamA: "4",
+        scoreTeamB: "0"),
+    TournamentMatch(id: "2",
+        teamA: "Borussia Dortmund",
+        teamB: "Tottenham Hotspur",
+        scoreTeamA: "2",
+        scoreTeamB: "1"),
   ]),
   Tournament(matches: [
-    TournamentMatch(id: "1", teamA: "Ajax", teamB: "Sevilla", scoreTeamA: "4", scoreTeamB: "3"),
+    TournamentMatch(id: "1",
+        teamA: "Ajax",
+        teamB: "Sevilla",
+        scoreTeamA: "4",
+        scoreTeamB: "3"),
   ])
 ];
 
@@ -193,7 +229,9 @@ class MyApp extends StatelessWidget {
 
 ## 🐞 Faced issues?
 
-If you encounter any problems or you feel the library is missing a feature, please raise a ticket on <a href=https://github.com/Farid023/flutter_tournament_bracket/issues>GitHub</a> and I'll look into it.
+If you encounter any problems or you feel the library is missing a feature, please raise a ticket
+on <a href=https://github.com/Farid023/flutter_tournament_bracket/issues>GitHub</a> and I'll look
+into it.
 
 ## 📃 License
 
